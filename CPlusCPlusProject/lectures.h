@@ -4,3 +4,4 @@
 
 
 void lecture1();
+void lecture2();
