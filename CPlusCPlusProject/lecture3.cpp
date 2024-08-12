@@ -122,11 +122,13 @@ void Play(Cat& cat)
 	{
 		std::cout << "실패" << std::endl;
 		cat.Hungry -= 5;
+		cat.curious += 5;
 	}
 	else
 	{
 		cat.Happy += 10;
 		cat.Hungry -= 5;
+		cat.curious -= 10;
 	}
 }
 
@@ -140,6 +142,7 @@ void DayEnd(Cat& cat, int& currentday)
 {
 	cat.Happy -= 10;
 	cat.Hungry -= 10;
+	cat.curious += 10;
 	currentday++;
 }
 
@@ -175,6 +178,12 @@ void CatMainPlay(Cat& cat, int currentday)
 		}
 		DayEnd(cat, currentday);
 
+		if (cat.curious > 50)
+		{
+			std::cout << "고양이가 호기심으로 인해 집을 나갔습니다" << std::endl;
+			exit(0);
+		}
+
 		if (currentday == 10)
 			break;
 	}
@@ -194,18 +203,22 @@ void Play(Bird& bird)
 {
 	bird.Happy += 10;
 	bird.Hungry -= 5;
+	bird.fly -= 10;
+
 }
 
 void Feed(Bird& bird)
 {
 	bird.Happy += 5;
 	bird.Hungry += 10;
+	bird.fly -= 5;
 }
 
 void DayEnd(Bird& bird, int& currentday)
 {
 	bird.Happy -= 10;
 	bird.Hungry -= 10;
+	bird.fly += 10;
 	currentday++;
 }
 
@@ -215,6 +228,7 @@ void ShowStatus(Bird& bird, int& currentday)
 	std::cout << "새 이름 : " << bird.name << std::endl;
 	std::cout << "새 행복도 : " << bird.Happy << std::endl;
 	std::cout << "새 허기도 : " << bird.Hungry << std::endl;
+	std::cout << "도망칠 확률 : " << bird.fly << std::endl;
 }
 
 void BirdMainPlay(Bird& bird, int currentday)
@@ -239,6 +253,13 @@ void BirdMainPlay(Bird& bird, int currentday)
 			Feed(bird);
 		}
 		DayEnd(bird, currentday);
+		
+		if (bird.fly > 70)
+		{
+			std::cout << "새가 도망갔습니다." << std::endl;
+			exit(0);
+		}
+
 
 		if (currentday == 10)
 			break;
@@ -274,7 +295,7 @@ void lecture3()
 		CatMainPlay(cat, currentday);
 		break;
 	case 3:
-
+		BirdMainPlay(bird, currentday);
 		break;
 	default:
 		std::cout << "잘못 입력했습니다" << std::endl;
