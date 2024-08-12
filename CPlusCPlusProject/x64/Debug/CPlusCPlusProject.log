@@ -1,2 +1,4 @@
-﻿  lecture2.cpp
+﻿  lecture3.cpp
+C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture3.cpp(118,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture3.cpp(255,7): warning C4101: 'bird' :참조되지 않은 지역 변수입니다.
   CPlusCPlusProject.vcxproj -> C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\x64\Debug\CPlusCPlusProject.exe
