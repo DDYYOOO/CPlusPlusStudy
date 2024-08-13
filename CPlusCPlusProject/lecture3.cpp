@@ -17,7 +17,7 @@
 #include"lectures.h"
 #include<cstdio>
 
-typedef struct Dog
+typedef struct Pet
 {
 	char name[30];
 	int Happy;
@@ -41,7 +41,7 @@ typedef struct Bird
 }Bird;
 
 // 개
-void DogName(Dog& dog)
+void DogName(Pet& dog)
 {
 	std::cout << "개의 이름을 입력 : ";
 	std::cin >> dog.name;
@@ -49,26 +49,26 @@ void DogName(Dog& dog)
 	dog.Hungry = 100;
 }
 
-void Play(Dog& dog)
+void Play(Pet& dog)
 {
 	dog.Happy += 10;
 	dog.Hungry -= 5;
 }
 
-void Feed(Dog& dog)
+void Feed(Pet& dog)
 {
 	dog.Happy += 5;
 	dog.Hungry += 10;
 }
 
-void DayEnd(Dog& dog, int& currentday)
+void DayEnd(Pet& dog, int& currentday)
 {
 	dog.Happy -= 10;
 	dog.Hungry -= 10;
 	currentday++;
 }
 
-void ShowStatus(Dog& dog, int& currentday)
+void ShowStatus(Pet& dog, int& currentday)
 {
 	std::cout << "현재 날짜 :" << currentday << "일" << std::endl;
 	std::cout << "개 이름 : " << dog.name << std::endl;
@@ -76,7 +76,7 @@ void ShowStatus(Dog& dog, int& currentday)
 	std::cout << "개 허기도 : " << dog.Hungry << std::endl;
 }
 
-void DogMainPlay(Dog& dog, int currentday)
+void DogMainPlay(Pet& dog, int currentday)
 {
 	DogName(dog);
 	while (1)
@@ -273,7 +273,7 @@ void BirdMainPlay(Bird& bird, int currentday)
 void lecture3() 
 {
 	// 구조체 선언
-	Dog dog;
+	Pet dog;
 	Cat cat;
 	Bird bird;
 	int currentday = 1;
