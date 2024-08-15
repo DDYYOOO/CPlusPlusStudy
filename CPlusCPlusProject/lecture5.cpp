@@ -20,6 +20,7 @@
 
 
 #include"lectures.h"
+#include<cmath>
 
 class Date
 {
@@ -224,12 +225,95 @@ void Rectangle::ShowRectangle()
 class Circle
 {
 private:
-	double radius;
+	PointXY point1;
+	PointXY point2;
+	int centerX;
+	int centerY;
+	float radius;
 	const float PI = 3.14f;
+	const float theta = 2 * PI * 1/4;
+	float length;
+	float circleArea;
+	float circleCicrcum;
 public:
 	Circle();
+	float CircleCenterX(); // 원점 좌표 X
+	float CircleCenterY(); // 원점 좌표 Y
+	float Radius();      // 반지름
+	float Length();     // 호의 길이
+	float CircleArea(); // 호의 넓이
+	//int CircleCircum(); 원의 둘레
+	void ShowCircleInfo();
 
 };
+
+Circle::Circle() : point1(), point2()
+{
+	this->centerX = CircleCenterX();
+	this->centerY = CircleCenterY();
+	this->radius = Radius();
+	this->length = Length();
+	this->circleArea = CircleArea();
+	//this->circleCicrcum = CircleCircum();
+}
+
+float Circle::CircleCenterX()
+{
+	int centerX = (point1.GetX() - point2.GetX()) / 2;
+	return centerX;
+}
+
+float Circle::CircleCenterY()
+{
+	int centerY = (point1.GetY() - point2.GetY()) / 2;
+	return centerY;
+}
+
+float Circle::Radius()
+{
+	this->radius = sqrt((float)(centerX * centerX) + (centerY * centerY));
+	return radius;
+}
+
+float Circle::Length()
+{
+	// 호의 길이
+	this->length = radius * theta;
+	return length;
+}
+
+float Circle::CircleArea()
+{
+	// 원의 넓이
+	//this->Circlearea = radius * 2 * PI;
+
+	// 호의 넓이
+	this->circleArea = radius * length * 1/2;
+	return circleArea;
+}
+
+//int Circle::CircleCircum()
+//{
+//	// 원의 둘레
+//	this->circleCicrcum = radius * radius * PI;
+//	return circleCicrcum;
+//}
+
+void Circle::ShowCircleInfo()
+{
+	//std::cout << "반지름 : " << radius << std::endl;
+	//std::cout << "호의 길이 : " << length << std::endl;
+	//std::cout << "호의 넓이 : " << circleArea << std::endl;
+	//std::cout << "세타 값 : " << theta << std::endl;
+	//std::cout << "원의 둘레 : " << circleCicrcum << std::endl;
+
+	std::printf("원점 좌표 : (%d, %d)\n", centerX, centerY);
+	std::printf("반지름 : %.3f\n", radius);
+	std::printf("세타 값 : % .3f\n", theta);
+	std::printf("호의 길이 : % .3f\n", length);
+	std::printf("호의 넓이 : % .3f\n", circleArea);
+	//std::printf("원의 둘레 : %.2f\n", circleCicrcum);
+}
 
 
 void lecture5()
@@ -256,7 +340,11 @@ void lecture5()
 	Capsule100 capsule;
 	pa.TakeCapsule(capsule);
 
-	Rectangle rect1;
-	rect1.ShowRectangle();
+	//Rectangle rect1;
+	//rect1.ShowRectangle();
+
+	Circle c1;
+	c1.ShowCircleInfo();
+
 
 }
