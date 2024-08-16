@@ -1,2 +1,11 @@
-﻿  lecture5.cpp
-  CPlusCPlusProject.vcxproj -> C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\x64\Debug\CPlusCPlusProject.exe
+﻿  lecture6.cpp
+C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture6.cpp(241,11): error C2665: 'Zealot::Zealot': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+  C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture6.cpp(191,9):
+  'Zealot::Zealot(int,int,char *)'일 수 있습니다.
+  	C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture6.cpp(241,11):
+  	'Zealot::Zealot(int,int,char *)': 인수 3을(를) 'const char [8]'에서 'char *'(으)로 변환할 수 없습니다.
+  		C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture6.cpp(241,18):
+  		문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+  C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture6.cpp(241,11):
+  인수 목록 '(int, int, const char [8])'을(를) 일치시키는 동안
+  
