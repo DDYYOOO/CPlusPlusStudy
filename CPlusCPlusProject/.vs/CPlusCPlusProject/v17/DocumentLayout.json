@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55EF2756-0D6D-428F-B1EA-883BC20BE281}|CPlusCPlusProject.vcxproj|C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\lecture5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{55EF2756-0D6D-428F-B1EA-883BC20BE281}|CPlusCPlusProject.vcxproj|solutionrelative:lecture5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{55EF2756-0D6D-428F-B1EA-883BC20BE281}|CPlusCPlusProject.vcxproj|C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\lecture6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{55EF2756-0D6D-428F-B1EA-883BC20BE281}|CPlusCPlusProject.vcxproj|solutionrelative:lecture6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EF2756-0D6D-428F-B1EA-883BC20BE281}|CPlusCPlusProject.vcxproj|C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{55EF2756-0D6D-428F-B1EA-883BC20BE281}|CPlusCPlusProject.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "lecture5.cpp",
-              "DocumentMoniker": "C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\lecture5.cpp",
-              "RelativeDocumentMoniker": "lecture5.cpp",
-              "ToolTip": "C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\lecture5.cpp",
-              "RelativeToolTip": "lecture5.cpp",
-              "ViewState": "AQIAACMBAAAAAAAAAAAAADMBAAA5AAAA",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvw8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-15T11:33:03.21Z",
+              "WhenOpened": "2024-08-17T12:54:38.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lecture6.cpp",
+              "DocumentMoniker": "C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\lecture6.cpp",
+              "RelativeDocumentMoniker": "lecture6.cpp",
+              "ToolTip": "C:\\Users\\dongy\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CPlusPlusStudy\\CPlusCPlusProject\\lecture6.cpp",
+              "RelativeToolTip": "lecture6.cpp",
+              "ViewState": "AQIAABEBAAAAAAAAAAAuwB4BAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-17T12:46:59.452Z",
               "EditorCaption": ""
             }
           ]

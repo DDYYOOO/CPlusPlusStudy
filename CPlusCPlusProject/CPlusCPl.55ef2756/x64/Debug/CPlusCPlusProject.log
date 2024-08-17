@@ -1,6 +1,2 @@
-﻿  lecture5.cpp
-C:\Users\dongy\OneDrive\바탕 화면\CPlusPlusStudy\CPlusCPlusProject\lecture5.cpp(252,31): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\dongy\OneDrive\바탕 화면\CPlusPlusStudy\CPlusCPlusProject\lecture5.cpp(253,31): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\dongy\OneDrive\바탕 화면\CPlusPlusStudy\CPlusCPlusProject\lecture5.cpp(263,9): warning C4244: 'return': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\dongy\OneDrive\바탕 화면\CPlusPlusStudy\CPlusCPlusProject\lecture5.cpp(269,9): warning C4244: 'return': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  lecture6.cpp
   CPlusCPlusProject.vcxproj -> C:\Users\dongy\OneDrive\바탕 화면\CPlusPlusStudy\CPlusCPlusProject\x64\Debug\CPlusCPlusProject.exe

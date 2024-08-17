@@ -36,11 +36,10 @@ public:
 	Marine(int x, int y, const char* marinename); // 클래스 멤버인 name을 외부의 marinename로 복사하는 것.  const 한정해서, marinename 변하지 않는 다는 것을 명시
 	Marine(const Marine& m1);  // 복사 생성자 호출 방식
 	~Marine();		// 소멸자 : 소멸할 때 호출
+	int Hp();
 	void Move(int x, int y);
 	int Attack();
 	void Damaged(int damage);
-
-
 	void ShowStatus();
 };
 
@@ -55,6 +54,7 @@ Marine::Marine(int x, int y)
 
 Marine::Marine(int x, int y, const char* marinename)
 {
+	std::cout << "Marine생성자 호출" << std::endl;
 	// 이름의 최대 
 	// (정적 할당)char name[30] 단점 : 30 이상의 이름 크기를 복사할 수 없다.
 	// strcpy_s(name, 30, marinename);
@@ -81,8 +81,16 @@ Marine::Marine(const Marine& m1)
 
 Marine::~Marine()
 {
-	std::cout << name << "의 소멸자 호출" << std::endl;
-	delete[] name;  // delete[] : 배열을 전체 메모리를 해제
+	if (hp <= 0)
+	{
+		std::cout << name << "의 소멸자 호출" << std::endl;
+		delete[] name;  // delete[] : 배열을 전체 메모리를 해제
+	}
+}
+
+int Marine::Hp()
+{
+	return hp;
 }
 
 void Marine::Move(int x, int y)
@@ -106,12 +114,11 @@ void Marine::Damaged(int damage)
 
 void Marine::ShowStatus()
 {
-	std::cout << "** 마린생성 **" << std::endl;
 	std::cout << "이름 : " << name << std::endl;
 	std::cout << "위치 : " << posX << "," << posY << std::endl;
 	std::cout << "공격력 : " << attackPower << std::endl;
 	std::cout << "현재 체력 : " << hp << std::endl;
-
+	std::cout << "              " << std::endl;
 }
 
 
@@ -174,23 +181,26 @@ private:
 	int posY;
 	bool isDead;
 public:
-	Zealot(int x, int y, char* zealotname);
+	Zealot(int x, int y, const char* zealotname);
 	Zealot(const Zealot& z1);
 	~Zealot();
 	void Move(int x, int y);
+	int Hp();
 	int Attack();
+	int Damaged(int damage);
 	void ShowStatus();
 };
 
-Zealot::Zealot(int x, int y, char* zealotname)
+Zealot::Zealot(int x, int y, const char* zealotname)
 {
-	std::cout << "생성자 호출" << std::endl;
+	std::cout << "Zealot생성자 호출" << std::endl;
 	name = new char[strlen(zealotname) + 1];
 	strcpy_s(name, strlen(zealotname) + 1, zealotname);
 	hp = 100;
 	attackPower = 10;
 	posX = x;
 	posY = y;
+	isDead = false;
 }
 
 Zealot::Zealot(const Zealot& z1)
@@ -206,7 +216,9 @@ Zealot::Zealot(const Zealot& z1)
 
 Zealot::~Zealot()
 {
-	std::cout << "소멸자 호출" << std::endl;
+	if(hp <= 0)
+		std::cout << name << "소멸자 호출" << std::endl;
+		delete[] name;
 }
 
 void Zealot::Move(int x, int y)
@@ -215,23 +227,177 @@ void Zealot::Move(int x, int y)
 	posY = y;
 }
 
+int Zealot::Hp()
+{
+	return hp;
+}
+
 int Zealot::Attack()
 {
 	return attackPower;
 }
 
+int Zealot::Damaged(int damage)
+{
+	hp -= damage;
+
+	if (hp <= 0)
+		isDead = true;
+	return damage;
+}
+
 void Zealot::ShowStatus()
 {
-	std::cout << "질럿 생성" << std::endl;
 	std::cout << "질럿 이름 : " << name << std::endl;
+	std::cout << "현재 위치 : " << posX << "," << posY << std::endl;
 	std::cout << "질럿 공격력 : " << attackPower << std::endl;
 	std::cout << "질럿 체력 : " << hp << std::endl;
+	std::cout << "              " << std::endl;
 }
+
+class Hydra
+{
+private:
+	char name[30];
+	int hp;
+	int attackPower;
+	int posX;
+	int posY;
+	bool isDead;
+public:
+	Hydra();
+	Hydra(Hydra& h1);
+	~Hydra();
+	void Move(int x, int y);
+	int Hp();
+	int Attack();
+	int Damaged(int damage);
+	void ShowStatus();
+
+};
+
+Hydra::Hydra()
+{
+	std::cout << "히드라 이름 입력 :";
+	std::cin >> name; 
+	std::cout << "히드라 posX 입력 :";
+	std::cin >> posX;
+	std::cout << "히드라 posY 입력 :";
+	std::cin >> posY;
+	hp = 70;
+	attackPower = 8;
+	isDead = false;
+}
+
+Hydra::Hydra(Hydra& h1)
+{
+	std::cin >> h1.name;
+	std::cin >> h1.posX;
+	std::cin >> h1.posY;
+
+	h1.hp = 70;
+	h1.attackPower = 8;
+	h1.isDead = false;
+}
+
+Hydra::~Hydra()
+{
+	if (hp <= 0)
+	{
+		std::cout << "Hydra 소멸자 생성" << std::endl;
+	}
+}
+
+void Hydra::Move(int x, int y)
+{
+	posX = x;
+	posY = y;
+}
+
+int Hydra::Hp()
+{
+	return hp;
+}
+
+int Hydra::Attack()
+{
+	return attackPower;
+}
+
+int Hydra::Damaged(int damage)
+{
+	hp -= damage;
+	
+	if (hp <= 0)
+		isDead = true;
+
+	return damage;
+}
+
+void Hydra::ShowStatus()
+{
+	std::cout << "히드라 이름 : " << name << std::endl;
+	std::cout << "히드라 위치 : " << posX << "," << posY << std::endl;
+	std::cout << "히드라 공격력 : " << attackPower << std::endl;
+	std::cout << "히드라 체력 : " << hp << std::endl;
+	std::cout << "              " << std::endl;
+}
+
 
 
 void lecture6_1()
 {
-	Zealot zealot1(3, 5, "Zealot1");
+	Marine marine1(1, 2, "marine1");
+	marine1.ShowStatus();
+
+	Zealot zealot1(1, 2, "zealot1");
 	zealot1.ShowStatus();
 
+	Hydra hydra1;
+	hydra1.ShowStatus();
+
+	while (1)
+	{
+		std::cout << "마린과 질럿과 히드라가 서로 공격" << std::endl;
+		std::cout << " " << std::endl;
+	
+		marine1.Damaged(zealot1.Attack());
+		marine1.Damaged(hydra1.Attack());
+
+		zealot1.Damaged(marine1.Attack());
+		zealot1.Damaged(hydra1.Attack());
+
+		hydra1.Damaged(marine1.Attack());
+		hydra1.Damaged(zealot1.Attack());
+	
+		marine1.ShowStatus();
+		zealot1.ShowStatus();
+		hydra1.ShowStatus();
+
+		if (zealot1.Hp() <= 0 && marine1.Hp() <= 0)
+		{
+			std::cout << "히드라가 모두를 제압하고 살아남았습니다" << std::endl;
+			std::cout << " " << std::endl;
+			hydra1.ShowStatus();
+			break;
+		}
+		else if (marine1.Hp() <= 0 && hydra1.Hp() <= 0)
+		{
+			std::cout << "질럿이 모두를 제압하고 살아남았습니다" << std::endl;
+			std::cout << " " << std::endl;
+			zealot1.ShowStatus();
+			break;
+		}
+		else if (zealot1.Hp() <= 0 && hydra1.Hp() <= 0)
+		{
+			std::cout << "마린이 모두를 제압하고 살아남았습니다" << std::endl;
+			std::cout << " " << std::endl;
+			marine1.ShowStatus();
+			break;
+		}
+
+	}
+
+
 }
+
