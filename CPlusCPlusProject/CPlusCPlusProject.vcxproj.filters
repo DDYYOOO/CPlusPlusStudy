@@ -13,28 +13,34 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Cpluspluslecture">
+      <UniqueIdentifier>{c96aa2e5-73ba-43ae-87bd-3ff19d9d557d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="lecture1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="lecture2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="lecture3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="lecture4.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="lecture5.cpp">
+    <ClCompile Include="lecture7.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="lecture6.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Cpluspluslecture</Filter>
+    </ClCompile>
+    <ClCompile Include="lecture1.cpp">
+      <Filter>소스 파일\Cpluspluslecture</Filter>
+    </ClCompile>
+    <ClCompile Include="lecture3.cpp">
+      <Filter>소스 파일\Cpluspluslecture</Filter>
+    </ClCompile>
+    <ClCompile Include="lecture2.cpp">
+      <Filter>소스 파일\Cpluspluslecture</Filter>
+    </ClCompile>
+    <ClCompile Include="lecture4.cpp">
+      <Filter>소스 파일\Cpluspluslecture</Filter>
+    </ClCompile>
+    <ClCompile Include="lecture5.cpp">
+      <Filter>소스 파일\Cpluspluslecture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
