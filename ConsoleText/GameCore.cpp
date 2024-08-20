@@ -26,11 +26,31 @@ void InitializeGame(Playerstate& playerstate, WorldState& worldstate)
 
 	//
 	{
+		std::string MapInfo =
+			"########"
+			"#....#.#"
+			"#.#....#"
+			"#...#..#"
+			"###..###";
+		MapData map = MapData("사막", "건조하고 황량한 곳이다", MapInfo);
+		map.MapPosition.posX = 0;
+		map.MapPosition.posY = 0;
 
+		worldstate.Mapdatas.push_back(map);
 	}
 
 	//
 	{
+		std::string MapInfo =
+			"###..###"
+			"#.#....#"
+			"#...##.#"
+			"##...#.#"
+			"###..###";
+		MapData map = MapData("정글", "습하고 식물들이 많이 있다", MapInfo);
+		map.MapPosition.posX = 0;
+		map.MapPosition.posY = 0;
 
+		worldstate.Mapdatas.push_back(map);
 	}
 }
