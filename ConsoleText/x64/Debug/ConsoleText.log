@@ -1,6 +1,2 @@
-﻿  ConsoleText.cpp
-  GameCore.cpp
-  Parser.cpp
-C:\Users\dongy\OneDrive\바탕 화면\CPlusPlusStudy\ConsoleText\Parser.cpp(35,36): warning C4244: '=': 'wint_t'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
-  ConsoleText.vcxproj -> C:\Users\dongy\OneDrive\바탕 화면\CPlusPlusStudy\CPlusCPlusProject\x64\Debug\ConsoleText.exe
+﻿  GameCore.cpp
+  ConsoleText.vcxproj -> C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\x64\Debug\ConsoleText.exe
