@@ -55,57 +55,55 @@
 #include"lectures.h"
 #include<string>
 
-//class Book
-//{
-//private:
-//	char* title;
-//	//std::string name;
-//	int price;
-//public:
-//	Book(char* title, int price)
-//	{
-//		this->price = price; 
-//		title = new char[strlen(title) + 1];
-//		strcpy_s(this->title, strlen(title) + 1, title);
-//	}
-//	//Book(int price, std::string name) : price(price), name(name) {}
-//	~Book()
-//	{
-//		delete[] title;
-//	}
-//
-//	void ShowBookInfo() 
-//	{
-//		std::cout << "제목 : " << title << std::endl;
-//		std::cout << "가격 : " << price << std::endl;
-//	}
-//
-//};
-//
-//class Ebook : public Book
-//{
-//private:
-//	char* DRMkey;
-//public:
-//	Ebook(char* title, int price, const char* key) : Book(price, title)
-//	{
-//		DRMkey = new char[strlen(key) + 1];
-//		strcpy_s(DRMkey, strlen(key) + 1, key);
-//	}
-//	~Ebook()
-//	{
-//		delete[] DRMkey;
-//	}
-//
-//	void ShowEbookInfo()
-//	{
-//		ShowBookInfo();
-//		std::cout << "DRMkey 값 : " << "wwwwwwwwwww" << std::endl;
-//	}
-//
-//};
+class Book
+{
+private:
+	char* title;
+	//std::string name;
+	int price;
+public:
+	Book(const char* title, int price)
+	{
+		this->price = price; 
+		title = new char[strlen(title) + 1];
+		strcpy_s(this->title, strlen(title) + 1, title);
+	}
+	//Book(int price, std::string name) : price(price), name(name) {}
+	~Book()
+	{
+		delete[] title;
+	}
 
-Gun gun;
+	void ShowBookInfo() 
+	{
+		std::cout << "제목 : " << title << std::endl;
+		std::cout << "가격 : " << price << std::endl;
+	}
+
+};
+
+class Ebook : public Book
+{
+private:
+	char* DRMkey;
+public:
+	Ebook(const char* title, int price, const char* key) : Book(title, price)
+	{
+		DRMkey = new char[strlen(key) + 1];
+		strcpy_s(DRMkey, strlen(key) + 1, key);
+	}
+	~Ebook()
+	{
+		delete[] DRMkey;
+	}
+
+	void ShowEbookInfo()
+	{
+		ShowBookInfo();
+		std::cout << "DRMkey 값 : " << "wwwwwwwwwww" << std::endl;
+	}
+
+};
 
 class Gun
 {
@@ -251,7 +249,7 @@ void lecture8()
 	//c1.num3 = 100;(x)
 
 	// 책
-	//Ebook ebook("C++예제문제집", 10000, "wwwwwww");
+	Ebook ebook("C++예제문제집", 10000, "wwwwwww");
 
 	// 경찰
 	Police police;
