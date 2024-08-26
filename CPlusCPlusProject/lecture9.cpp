@@ -234,10 +234,10 @@ public:
 // PET을 상속받는 클래스인데, 각 클래스 고유의 메서드를 실행하는 방법
 // Hunting 실행하는 법 : Cat, Hide 실행을 하려면 어떻게 해야하는가?
 
-// PlayWithCat
-// PlayWithCat(Cat* cat),(Cat& cat); cat->Hide();
-
-
+// Play(Pet* pet)으로 Cat고유의 함수, Dog고유의 함수를 실행하는 법
+// PlayWithCat(Cat* cat); (Cat& cat);  cat->Hide();
+// PlayWithDog(Dog* dog);
+// PlayWithBird(Bird* bird);
 
 void lecture9()
 {

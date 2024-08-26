@@ -186,4 +186,7 @@ void lecture10()
 
 	// PET Dog, Cat...
 	// Cat* catPtr = dynamic_cast<Cat*>(myPet);
+	// if(myPet != nullPtr)
+	//		catPtr->Hide();
+	// Dog*	dogPtr
 }
