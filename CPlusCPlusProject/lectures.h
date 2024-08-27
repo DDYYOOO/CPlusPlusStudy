@@ -2,7 +2,6 @@
 #include <iostream>
 #include<cstring>
 
-
 void lecture1();
 void lecture2();
 void lecture3();
@@ -14,3 +13,4 @@ void lecture7();
 void lecture8();
 void lecture9();
 void lecture10();
+void lecture11();

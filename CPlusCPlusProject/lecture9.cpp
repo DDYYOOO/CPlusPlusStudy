@@ -70,7 +70,7 @@ protected:
 	int hungry;
 	int happy;
 public:
-	PET() {};
+	PET() {}
 	PET(int hungry, int happy) : hungry(hungry), happy(happy)
 	{
 		//this->hungry = hungry;
@@ -171,7 +171,7 @@ private:
 		std::cout << "남은 행동력 : " << activePoint << std::endl;
 	}
 public:
-	PetContorller() {};		// 디폴트 생성자
+	PetContorller() {}		// 디폴트 생성자
 	PetContorller(PET* pet, int money, int AP) : money(money), activePoint(AP)
 	{
 		myPet = pet;

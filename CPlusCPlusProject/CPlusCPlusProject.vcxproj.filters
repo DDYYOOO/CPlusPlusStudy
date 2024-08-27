@@ -51,6 +51,9 @@
     <ClCompile Include="lecture8.cpp">
       <Filter>소스 파일\Cpluspluslecture</Filter>
     </ClCompile>
+    <ClCompile Include="lecture11.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lectures.h">
