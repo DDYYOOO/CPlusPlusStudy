@@ -32,11 +32,42 @@ int main()
 
 	// phase2. player vs monster(몬스터를 하나 만들고, 그 몬스터 같지만 다른 varitaion된 몬스터를 구현)
 
-	// player객체 생성 initilize
+	// player객체 생성 initialize
 	// Monster객체 생성
 	// Monster Reward객체 생성
 	// Reward Item객체 생성
 
-	Player* p1 = new Player();
-	Monster* m1 = new Monster();
+	Player player(100, 100, "오잉");
+	player.Damaged(10);
+	
+
+	Item sword("소드", 10);
+	Reward goblinReward(50, 1000, sword);
+	Goblin goblin(50, 5);
+	
+	int userInput = 0;
+	int turn = 1;
+
+	while (1)
+	{
+		std::cout << "현재 징행중인 턴수 : " << turn << std::endl;
+		std::cout << "1. 공격" << std::endl;
+		std::cout << "2. ??" << std::endl;
+		std::cin >> userInput;
+
+		if (userInput == 1)
+		{
+			player.Attack(&goblin);
+		}
+
+		std::cout << "Goblin차례" << std::endl;
+		goblin.Attack(&player);
+
+		if (player.IsDead() || goblin.IsDead())
+		{
+			break;
+		}
+
+		turn++;
+	}
 }
