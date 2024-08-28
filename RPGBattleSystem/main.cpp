@@ -37,8 +37,8 @@ int main()
 	// Monster Reward按眉 积己
 	// Reward Item按眉 积己
 
-	Player player(100, 100, "坷雷");
-	player.Damaged(10);
+	Player player(100, 10, "坷雷");
+	//player.Damaged(10);
 	
 
 	Item sword("家靛", 10);

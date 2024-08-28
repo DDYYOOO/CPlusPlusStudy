@@ -3,11 +3,52 @@
 #include<string>
 #include<vector>
 
-class Monster;
-class Reward;
-class Item;
+
+class Item
+{
+private:
+	std::string Name;
+	int index;
+public:
+	Item() {}
+	Item(std::string name, int index) : Name(name), index(index) {}
+	void ShowItemInfo()
+	{
+		std::cout << "아이템 이름 : " << Name << std::endl;
+		std::cout << "아이템 번호 : " << index << std::endl;
+	}
+};
+
+
+class Reward
+{
+private:
+	int exp;
+	int money;
+	// 아이템
+	Item* item;
+public:
+	Reward() {}
+	Reward(int exp, int money, Item& item) : exp(exp), money(money)
+	{
+		this->item = new Item();
+		this->item = &item;
+	}
+	~Reward()
+	{
+		delete item;
+	}
+	void RewardItem(std::vector<Item>* inventory);
+	int RewardMoney() { return money; };
+	int RewardExp() { return exp; };
+
+};
+
 // 몬스터와의 전투
 // 1. 공격
+
+class Monster;
+
 class Player
 {
 private:
@@ -66,7 +107,7 @@ public:
 	// 공격하다
 	virtual void Attack(Player* player) = 0;
 	// 공격받다
-	virtual void Damaged(int damage) = 0;
+	virtual void Damaged(Player* player) = 0;
 	// 사망체크 함수
 	virtual bool IsDead() = 0;
 	// DropReward
@@ -77,7 +118,7 @@ class Goblin : public Monster
 {
 public:
 	Goblin(int hp, int ap) : Monster(hp, ap)
-	{
+	{	
 		std::cout << "Goblin생성" << std::endl;
 	}
 	~Goblin() 
@@ -99,41 +140,3 @@ public:
 	void DorpReward(Player* player);
 };
 
-class Reward
-{
-private:
-	int exp;
-	int money;
-	// 아이템
-	Item* item;
-public:
-	Reward() {}
-	Reward(int exp, int money, Item& item) : exp(exp), money(money)
-	{
-		this->item = new Item();
-		this->item = &item;
-	}
-	~Reward()
-	{
-		delete item;
-	}
-	void RewardItem(std::vector<Item>* inventory);
-	int RewardMoney() { return money; };
-	int RewardExp() { return exp; };
-
-};
-
-class Item
-{
-private:
-	std::string Name;
-	int index;
-public:
-	Item() {}
-	Item(std::string name, int index) : Name(name), index(index) {}
-	void ShowItemInfo()
-	{
-		std::cout << "아이템 이름 : " << Name << std::endl;
-		std::cout << "아이템 번호 : " << index << std::endl;
-	}
-};

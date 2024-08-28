@@ -6,7 +6,7 @@ void Player::Attack(Monster* monster)
 {
 	// monster->Damaged(AP); : 몬스터가 공격을 받음
 	std::cout << "플레이어 공격" << std::endl;
-	monster->Damaged(this->AP);
+	monster->Damaged(this);
 
 	// 몬스터 죽음 : bool isDead()
 	if (monster->IsDead())
@@ -65,6 +65,7 @@ void Player::GetMoney(int money)
 
 std::vector<Item>* Player::GetInventory()
 {
+	
 	return &inventory;
 }
 
