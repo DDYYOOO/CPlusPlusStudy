@@ -121,7 +121,7 @@ void Goblin::DorpReward(Player* player)
 	std::cout << "몬스터 처치 보상" << std::endl;
 	monsterReward->RewardExp();
 	monsterReward->RewardMoney();
-	//monsterReward->RewardItem();
+	monsterReward->RewardItem(player->GetInventory());
 }
 
 
