@@ -3,6 +3,8 @@
                         // C++ 헤더 파일은 .h없이 사용
 // #include<cstdio>     // C++ 컴파일러로 C헤더 stdio.h를 불러온다. (#include<cstring>)
 
+
+
 int main()
 {
     //lecture1();
@@ -17,7 +19,9 @@ int main()
     //lecture9();
     //lecture10();
     //lecture11();
-    lecture12();
+    //lecture12();
+    lecture13();
+
 }
 
 

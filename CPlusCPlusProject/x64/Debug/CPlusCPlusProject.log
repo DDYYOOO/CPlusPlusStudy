@@ -1,12 +1,2 @@
-﻿  lecture12.cpp
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,34): warning C4305: '인수': 'double'에서 'T'(으)로 잘립니다.
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,34): warning C4305:         with
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,34): warning C4305:         [
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,34): warning C4305:             T=float
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,34): warning C4305:         ]
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,29): warning C4305: '인수': 'double'에서 'T'(으)로 잘립니다.
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,29): warning C4305:         with
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,29): warning C4305:         [
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,29): warning C4305:             T=float
-C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\lecture12.cpp(140,29): warning C4305:         ]
+﻿  lecture13.cpp
   CPlusCPlusProject.vcxproj -> C:\Users\Administrator\Desktop\CPlusPlusStudy\CPlusCPlusProject\x64\Debug\CPlusCPlusProject.exe
