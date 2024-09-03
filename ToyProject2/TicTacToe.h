@@ -2,6 +2,7 @@
 #include<iostream>
 #include<cstdlib>
 #include<string>
+#include<iomanip>
 
 // 틱택토 게임
 // 보드판	3x3  격자판(0 ~ 8)을 만들어야한다 -> 클래스로 표현 class Board
@@ -17,6 +18,8 @@
 
 class Board
 {
+	// bMap 들어있는 데이터가 숫자인지 아닌지 체크하는 함수
+	bool isNum(std::string& s);
 private:
 	int size;	// 크기 3
 	std::string** bMap;// 2차원 배열[세로][가로] 
@@ -27,16 +30,21 @@ public:
 	void GamePlay();
 
 	// 2차원 배열에 데이터를 넣는 함수
-	void Insert_X(int pos);
-	void Insert_Y(int pos);
+	bool Insert_X(int pos);
+	bool Insert_O(int pos);
 	
 	// 2차원 배열 안에 데이터가 있는지 없는지 체크하는 함수
-	std::string Get_Item(int pos);
+	std::string Get_Item(int pos) const;
+	std::string Get_Item(int col, int row) const;
+
+	// 보드판에 들어있는 값을 출력해주는 함수
+	void Print();
+
 	
 	bool X_Win();
 	bool O_Win();
 
-	int GetSize() { return size; }
+	int GetSize() const { return size; }
 
 };
 

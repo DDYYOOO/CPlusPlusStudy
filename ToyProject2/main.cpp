@@ -82,10 +82,12 @@ public:
 		// Board board; board.GamePlay();
 		Board b;
 
-		while (1)
-		{
-			// 게임의 흐름 정리
-		}
+		b.GamePlay();
+
+		//while (1)
+		//{
+		//	// 게임의 흐름 정리
+		//}
 
 	}
 	void GameEnd()
@@ -96,7 +98,7 @@ public:
 
 int main()
 {
-	std::cout << "STD함수 예제" << std::endl;
+	//std::cout << "STD함수 예제" << std::endl;
 
 	//SampleSTD* sample = new SampleSTD;
 	////sample->SetWidthExample();
@@ -105,8 +107,8 @@ int main()
 	
 
 	
-	// GameManager* gm = GameManager::GetSingleTon();
-	//gm->MainMenu();
+	GameManager* gm = GameManager::GetSingleTon();
+	gm->MainMenu();
 
 
 }
